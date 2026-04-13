@@ -14,9 +14,8 @@ A key part of this simulation was not just detecting phishing emails, but identi
 * Completed the alert investigation flow in **~25 minutes**, despite the scenario being designed to take **40+ minutes**
 
 <p align="center">
-  
-  <img src="https://github.com/mnv1851/TryHackMe-SOC-Simulation-Write-Up-Phishing-Unfolding/blob/main/Screenshots/11-WON.png" width="50" />
   <img src="https://github.com/mnv1851/TryHackMe-SOC-Simulation-Write-Up-Phishing-Unfolding/blob/main/Screenshots/10-Quick-MTTR.png" width="50%" />
+   <img src="https://github.com/mnv1851/TryHackMe-SOC-Simulation-Write-Up-Phishing-Unfolding/blob/main/Screenshots/9-100%25AccuracyTP.png" width="50%" />
 </p>
 
 This project demonstrates practical SOC Level 1 skills in:
@@ -34,6 +33,12 @@ This project demonstrates practical SOC Level 1 skills in:
 * **Sysmon telemetry** for process creation visibility
 * **TryHackMe SOC simulation environment**
 * **Alert queue / case reporting workflow** for classification and escalation decisions
+
+<p align="center">
+  <img src="https://github.com/mnv1851/TryHackMe-SOC-Simulation-Write-Up-Phishing-Unfolding/blob/main/Screenshots/1-Dashboard.png" width="50%" />
+  <img src="https://github.com/mnv1851/TryHackMe-SOC-Simulation-Write-Up-Phishing-Unfolding/blob/main/Screenshots/2-AlertsQueu.png" width="50%" />
+  <img src="https://github.com/mnv1851/TryHackMe-SOC-Simulation-Write-Up-Phishing-Unfolding/blob/main/Screenshots/4-SplunkDashboard.png" width="50%" />
+</p>
 
 ## Scenario Objective
 
@@ -54,7 +59,9 @@ This helped separate:
 
 * **background phishing noise**
 * from the **actual phishing-driven compromise chain**
-
+<p align="center">
+  <img src="https://github.com/mnv1851/TryHackMe-SOC-Simulation-Write-Up-Phishing-Unfolding/blob/main/Screenshots/5-LowAlerts.png" width="50%" />
+</p>
 ## Key Finding
 
 Most low-severity phishing alerts were **true positives**, but they were limited to suspicious email delivery only. They contained scam-like or spam-style social engineering content, but showed:
@@ -69,6 +76,10 @@ The **real incident path** was tied to:
 * **Recipient:** `michael.ascot@tryhatme.com`
 * **Host:** `win-3450`
 * **Malicious domain:** `haz4rdw4re.io`
+
+<p align="center">
+  <img src="https://github.com/mnv1851/TryHackMe-SOC-Simulation-Write-Up-Phishing-Unfolding/blob/main/Screenshots/8-MediumAlert.png" width="50%" />
+</p>
 
 ## Confirmed Initial Access
 
@@ -97,6 +108,11 @@ This was a much stronger indicator than the earlier background phishing emails b
 ## Endpoint Compromise Analysis
 
 After the phishing email delivery, I pivoted into the alerts and Sysmon telemetry tied to **host `win-3450`**.
+
+<p align="center">
+  <img src="https://github.com/mnv1851/TryHackMe-SOC-Simulation-Write-Up-Phishing-Unfolding/blob/main/Screenshots/3-CompanyAssets.png" width="50%" />
+</p>
+
 
 ### Suspicious Execution Evidence
 
@@ -303,3 +319,6 @@ This lab was a strong exercise in practical SOC analysis because it required mor
 
 By correlating phishing telemetry, host-based process creation, network share access, and suspicious DNS activity, I was able to identify the real breach path quickly and accurately. This project reflects the kind of triage, prioritization, and investigation workflow expected from a SOC Analyst handling a live phishing-driven incident.
 
+<p align="center">
+  <img src="https://github.com/mnv1851/TryHackMe-SOC-Simulation-Write-Up-Phishing-Unfolding/blob/main/Screenshots/11-WON.png" width="200%" />
+</p>
