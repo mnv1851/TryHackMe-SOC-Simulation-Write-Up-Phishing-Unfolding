@@ -13,6 +13,12 @@ A key part of this simulation was not just detecting phishing emails, but identi
 * **Mean time to resolve: 2 minutes**
 * Completed the alert investigation flow in **~25 minutes**, despite the scenario being designed to take **40+ minutes**
 
+<p align="center">
+  
+  <img src="https://github.com/mnv1851/TryHackMe-SOC-Simulation-Write-Up-Phishing-Unfolding/blob/main/Screenshots/11-WON.png" width="50" />
+  <img src="https://github.com/mnv1851/TryHackMe-SOC-Simulation-Write-Up-Phishing-Unfolding/blob/main/Screenshots/10-Quick-MTTR.png" width="50%" />
+</p>
+
 This project demonstrates practical SOC Level 1 skills in:
 
 * alert triage
