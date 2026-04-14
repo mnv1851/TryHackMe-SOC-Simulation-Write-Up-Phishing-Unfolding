@@ -6,6 +6,10 @@ This playbook provides a structured incident response workflow for investigating
 
 This playbook is based on a hands-on SOC investigation scenario where multiple phishing alerts were triaged, low-value phishing noise was separated from the true compromise path, and the real incident was traced from email delivery to endpoint execution and suspicious DNS activity.
 
+<p align="center">
+  <img src="https://github.com/mnv1851/TryHackMe-SOC-Simulation-Write-Up-Phishing-Unfolding/blob/main/Screenshots/Phishing-driven%20endpoint%20compromise%20playbook.png" width="50%" />
+</p>
+
 ## Incident Summary
 
 A user received a phishing email containing a ZIP attachment themed as an overdue payment notice. After likely user interaction with the attachment, suspicious process activity was observed on the endpoint, including PowerShell spawning `net.exe` and `nslookup.exe`. The compromised host accessed a sensitive network file share and executed repeated DNS lookups to randomized subdomains of a suspicious external domain, indicating likely command-and-control or DNS-based exfiltration.
